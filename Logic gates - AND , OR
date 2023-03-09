@@ -1,0 +1,28 @@
+//OR GATE
+ORG 0000H  
+SETB P0.0
+SETB P0.1
+SETB P0.2
+READ:MOV C , P0.0      
+MOV 00H ,C
+CLR c
+MOV C, P0.1
+ANL C,00H
+MOV P0.2,C
+SJMP READ
+END                                                                      
+
+//AND gate
+ORG 0000H  
+SETB P0.0
+SETB P0.1
+SETB P0.2
+READ:MOV C , P0.0      
+MOV 00H ,C
+CLR c
+MOV C, P0.1
+ORL C,00H
+MOV P0.2,C
+SJMP READ
+END          
+
